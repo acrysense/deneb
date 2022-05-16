@@ -31,7 +31,7 @@
                         <a href="community.html" class="nav__link">Сообщество</a>
                     </li>
                     <li class="nav__item">
-                        <a href="events.html" class="nav__link">Мероприятия</a>
+                        <a href="new-events.html" class="nav__link">Мероприятия</a>
                     </li>
                     <li class="nav__item">
                         <a href="contacts.html" class="nav__link">Контакты</a>
@@ -43,81 +43,87 @@
     <!-- end of header -->
     <!-- wrapper -->
     <div class="wrapper">
-        <!-- events -->
-        <section class="events" id="events">
+        <!-- new events -->
+        <section class="new-events" id="new-events">
             <div class="container container--lg">
                 <div class="section-heading">
                     <h1 class="section-heading__title">Мероприятия <br>Deneb</h1>
                 </div>
                 <div class="tabs">
                     <ul class="tabs__list">
-                        <li class="tabs__item tabs__item--active">
-                            <button class="tabs__tab">Прошедшие мероприятия</button>
+                        <li class="tabs__item tabs__item--link">
+                            <a href="events-past.html" class="tabs__tab">Прошедшие мероприятия</a>
                         </li>
-                        <li class="tabs__item">
-                            <button class="tabs__tab">Новые мероприятия</button>
+                        <li class="tabs__item tabs__item--link">
+                            <a href="events-past.html" class="tabs__tab">Новые мероприятия</a>
                         </li>
                     </ul>
                     <div class="tabs__wrapper tabs__wrapper--active">
-                        <div class="events__wrapper">
-                            <a href="#" class="events__item">
-                                <picture class="events__img">
+                        <div class="new-events__wrapper">
+                            <a href="#" class="new-events__item">
+                                <picture class="new-events__img">
+                                    <img src="img/dist/events-item-bg.png" alt="Image">
+                                    <span class="new-events__date">25.02.21</span>
+                                </picture>
+                                <div class="new-events__body">
+                                    <span class="new-events__title">Три спортсмена штурмуют высоту <br>4466 метров</span>
+                                </div>
+                            </a>
+                            <a href="#" class="new-events__item">
+                                <picture class="new-events__img">
                                     <img src="img/dist/event-slide.jpg" alt="Image">
                                 </picture>
-                                <div class="events__body">
-                                    <span class="events__title">Прошло мероприятие <br>по триатлону посвященный ярким событиям</span>
-                                    <span class="events__description">Особой гордостью компании стала природная питьевая вода «Горная», являющаяся лидером рынка чистой негазированной воды и ставшая нарицательным названием в республике для всей бутилированной воды.</span>
-                                    <svg class="events__arrow">
-                                        <use xlink:href="img/dist/sprite.svg#icon-arrow-next"></use>
-                                    </svg>
+                                <div class="new-events__body">
+                                    <span class="new-events__title">Прошло мероприятие по триатлону посвященный...</span>
                                 </div>
-                            </a>
-                            <a href="#" class="events__item">
-                                <div class="events__body">
-                                    <span class="events__title">Три спортсмена  штурмуют высоту в горах дагестана <br>4466 метров</span>
-                                    <span class="events__description">Особой гордостью компании стала природная питьевая вода «Горная», являющаяся лидером рынка чистой негазированной воды и ставшая нарицательным названием в республике для всей бутилированной воды.</span>
-                                    <svg class="events__arrow">
-                                        <use xlink:href="img/dist/sprite.svg#icon-arrow-next"></use>
-                                    </svg>
-                                </div>
-                                <picture class="events__img">
-                                    <img src="img/dist/event-slide.jpg" alt="Image">
-                                    <span class="events__date">25.02.21</span>
-                                </picture>
-                            </a>
-                            <a href="#" class="events__item">
-                                <picture class="events__img">
-                                    <img src="img/dist/events-03.jpg" alt="Image">
-                                    <span class="events__date">25.02.21</span>
-                                </picture>
-                                <div class="events__body">
-                                    <span class="events__title">пройден Вела тур <br>на 4 х 100 метров <br>в сочи</span>
-                                    <span class="events__description">Особой гордостью компании стала природная питьевая вода «Горная», являющаяся лидером рынка чистой негазированной воды и ставшая нарицательным названием в республике для всей бутилированной воды.</span>
-                                    <svg class="events__arrow">
-                                        <use xlink:href="img/dist/sprite.svg#icon-arrow-next"></use>
-                                    </svg>
-                                </div>
-                            </a>
-                            <a href="#" class="events__item">
-                                <div class="events__body">
-                                    <span class="events__title">Прошло мероприятие <br>по триатлону посвященный ярким событиям</span>
-                                    <span class="events__description">Особой гордостью компании стала природная питьевая вода «Горная», являющаяся лидером рынка чистой негазированной воды и ставшая нарицательным названием в республике для всей бутилированной воды.</span>
-                                    <svg class="events__arrow">
-                                        <use xlink:href="img/dist/sprite.svg#icon-arrow-next"></use>
-                                    </svg>
-                                </div>
-                                <picture class="events__img">
-                                    <img src="img/dist/events-08.jpg" alt="Image">
-                                    <span class="events__date">25.02.21</span>
-                                </picture>
                             </a>
                         </div>
                     </div>
-                    <div class="tabs__wrapper"></div>
                 </div>
             </div>
         </section>
-        <!-- end of events -->
+        <!-- end of new events -->
+        <!-- expected events -->
+        <div class="expected-events" id="expected-events">
+            <div class="container container--lg">
+                <div class="section-heading">
+                    <h1 class="section-heading__title">Ожидаемые</h1>
+                </div>
+                <div class="expected-events__wrapper">
+                    <a href="#" class="expected-events__item expected-events__item--horizontal">
+                        <div class="expected-events__body">
+                            <span class="expected-events__title">Прошло мероприятие <br>по триатлону посвященный <br>ярким событиям</span>
+                            <span class="expected-events__date">25.02.21</span>
+                        </div>
+                        <picture class="expected-events__img">
+                            <img src="img/dist/events-08.jpg" alt="Image">
+                        </picture>
+                    </a>
+                    <a href="#" class="expected-events__item expected-events__item--horizontal">
+                        <div class="expected-events__body">
+                            <span class="expected-events__title">Прошло в ситуации <br>с COVID проводим <br>мероприятия</span>
+                            <span class="expected-events__date">25.02.21</span>
+                        </div>
+                        <picture class="expected-events__img">
+                            <img src="img/dist/events-08.jpg" alt="Image">
+                        </picture>
+                    </a>
+                    <a href="#" class="expected-events__item expected-events__item--vertical" style="background-image: url(img/dist/events-03.jpg);">
+                        <div class="expected-events__body">
+                            <span class="expected-events__date">25.02.21</span>
+                            <span class="expected-events__title">Пройден Вела тур на <br>4 х 100 метров в городе <br>Сочи </span>
+                        </div>
+                    </a>
+                    <a href="#" class="expected-events__item expected-events__item--vertical" style="background-image: url(img/dist/events-03.jpg);">
+                        <div class="expected-events__body">
+                            <span class="expected-events__date">25.02.21</span>
+                            <span class="expected-events__title">Прошло мероприятие <br>по триатлону посвященный <br>ярким событиям</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- end of expected events -->
     </div>
     <!-- end of wrapper -->
     <!-- footer -->
