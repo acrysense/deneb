@@ -14,9 +14,9 @@
             <div class="wrapper-parallax">
                 <!-- header -->
                 <header class="header header--white" id="header">
-                    <a href="#" class="logotype header__logotype">
-                        <img src="img/dist/logotype-white.svg" alt="deneb" width="78px" height="37px" class="header__logotype--white">
-                        <img src="img/dist/logotype-purple.svg" alt="deneb" width="78px" height="37px" class="header__logotype--purple">
+                    <a href="index.html" class="logotype header__logotype">
+                        <img src="img/dist/logotype-white.svg" alt="deneb" width="78px" height="37px" class="header__logotype--static">
+                        <img src="img/dist/logotype-purple.svg" alt="deneb" width="78px" height="37px" class="header__logotype--menu">
                     </a>
                     <button class="hamburger" id="hamburger-toggle" aria-label="Меню">
                         <span class="hamburger__inner"></span>
@@ -64,11 +64,11 @@
                             <div class="swiper-slide" style="background-color: #192235">
                                 <div class="main__slide main__slide--limit">
                                     <div class="main__body">
-                                        <picture class="main__img">
+                                        <picture class="main__img main__img--top">
                                             <img src="img/dist/main-slide-img.png" width="309px" height="30px" alt="Image">
                                         </picture>
                                         <h2 class="main__title main__title--gradient">Вершина <br>добра</h2>
-                                        <picture class="main__img">
+                                        <picture class="main__img main__img--bottom">
                                             <img src="img/dist/youtube-img.png" width="101px" height="20px" alt="Image">
                                         </picture>
                                     </div>
@@ -86,16 +86,16 @@
                             </div>
                         </div>
                         <div class="swiper-buttons">
-                            <div class="swiper-button-prev" aria-label="Назад">
+                            <button class="swiper-button-prev" aria-label="Назад">
                                 <svg class="swiper-button-icon">
                                     <use xlink:href="img/dist/sprite.svg#icon-arrow-prev-white"></use>
                                 </svg>
-                            </div>
-                            <div class="swiper-button-next" aria-label="Далее">
+                            </button>
+                            <button class="swiper-button-next" aria-label="Далее">
                                 <svg class="swiper-button-icon">
                                     <use xlink:href="img/dist/sprite.svg#icon-arrow-next-white"></use>
                                 </svg>
-                            </div>
+                            </button>
                         </div>
                     </div>
                 </div>
