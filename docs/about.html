@@ -3,68 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>deneb - О компании</title>
+    <title>deneb - О нас</title>
     <!-- styles -->
-    <style>
-        .loader {
-            position: fixed;
-            top: 0;
-            right: 0;
-            bottom: 0;
-            left: 0;
-            z-index: 1100;
-            display: -webkit-box;
-            display: -ms-flexbox;
-            display: flex;
-            -webkit-box-align: center;
-            -ms-flex-align: center;
-            align-items: center;
-            -webkit-box-pack: center;
-            -ms-flex-pack: center;
-            justify-content: center;
-            width: 100%;
-            height: 100%;
-            background: rgba(64, 68, 69, 0.9);
-            -webkit-backdrop-filter: blur(30px);
-            backdrop-filter: blur(30px);
-            transition: all 0.25s ease-in-out;
-        }
-        .loader--hidden {
-            opacity: 0;
-            visibility: hidden;
-            pointer-events: none;
-            -webkit-user-select: none;
-            -moz-user-select: none;
-            -ms-user-select: none;
-            user-select: none;
-        }
-        .loader__wrapper {
-            text-align: center;
-        }
-        .loader__logotype {
-            margin: 0 auto;
-            max-width: 206px;
-            width: 100%;
-        }
-    </style>
     <link rel="stylesheet" href="css/vendor.min.css">
     <link rel="stylesheet" href="css/app.min.css">
 </head>
 <body>
-    <!-- loader -->
-    <div class="loader" id="loader">
-        <div class="loader__wrapper">
-            <picture class="loader__logotype">
-                <img src="img/dist/loader.svg" width="206px" height="62px" alt="deneb">
-            </picture>
-        </div>
-    </div>
-    <!-- end of loader -->
     <!-- header -->
     <header class="header" id="header">
-        <a href="index.html" class="logotype header__logotype">
-            <img src="img/dist/logotype-black.svg" alt="deneb" width="78px" height="37px" class="header__logotype--static">
-            <img src="img/dist/logotype-purple.svg" alt="deneb" width="78px" height="37px" class="header__logotype--menu">
+        <a href="#" class="logotype header__logotype">
+            <img src="img/dist/logotype-black.svg" alt="deneb">
         </a>
         <button class="hamburger" id="hamburger-toggle" aria-label="Меню">
             <span class="hamburger__inner"></span>
@@ -78,7 +26,7 @@
                         <li class="nav__item">
                             <a href="index.html" class="nav__link">Главная</a>
                         </li>
-                        <li class="nav__item nav__item--active">
+                        <li class="nav__item">
                             <a href="about.html" class="nav__link">О компании</a>
                         </li>
                         <li class="nav__item">
@@ -99,129 +47,123 @@
         </div>
     </header>
     <!-- end of header -->
-    <!-- about -->
-    <div class="about" id="about">
-        <div class="container">
-            <div class="about__slider">
-                <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper about__super">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <img src="img/dist/about-01.jpg" alt="Image">
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="img/dist/about-02.jpg" alt="Image">
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="img/dist/about-03.jpg" alt="Image">
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="img/dist/about-04.jpg" alt="Image">
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="img/dist/about-05.jpg" alt="Image">
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="img/dist/about-06.jpg" alt="Image">
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="img/dist/about-07.jpg" alt="Image">
+    <!-- wrapper -->
+    <div class="wrapper">
+        <!-- history -->
+        <section class="history history--pb" id="history">
+            <div class="container container--lg">
+                <div class="section-heading">
+                    <div class="section-heading__nav">
+                        <h1 class="section-heading__title">Мы – <br>компания «Денеб»</h1>
+                        <div class="tabs section-heading__tabs">
+                            <ul class="tabs__list">
+                                <li class="tabs__item">
+                                    <a href="team.html" class="tabs__tab">Команда</a>
+                                </li>
+                                <li class="tabs__item">
+                                    <a href="history.html" class="tabs__tab">История</a>
+                                </li>
+                                <li class="tabs__item">
+                                    <a href="documents.html" class="tabs__tab">Документы</a>
+                                </li>
+                            </ul>
                         </div>
                     </div>
-                    <div class="swiper-button-next"></div>
-                    <div class="swiper-button-prev"></div>
                 </div>
-                <div thumbsSlider="" class="swiper about__thumbs">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <div class="about__thumb-wrapper">
-                                <div class="about__thumb-data">
-                                    <p class="about__thumb-year">
-                                    2022
-                                    </p>
-                                    <p class="about__thumb-descr">Денеб отмечает
-                                    своё 25-летие</p>
-                                </div>
-                                <div class="about__thumb-progress"></div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="about__thumb-wrapper">
-                                <div class="about__thumb-data">
-                                    <p class="about__thumb-year">
-                                    2021
-                                    </p>
-                                    <p class="about__thumb-descr">Денеб отмечает
-                                    своё 25-летие</p>
-                                </div>
-                                <div class="about__thumb-progress"></div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="about__thumb-wrapper">
-                                <div class="about__thumb-data">
-                                    <p class="about__thumb-year">
-                                    2020
-                                    </p>
-                                    <p class="about__thumb-descr">Денеб отмечает
-                                    своё 25-летие</p>
-                                </div>
-                                <div class="about__thumb-progress"></div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="about__thumb-wrapper">
-                                <div class="about__thumb-data">
-                                    <p class="about__thumb-year">
-                                    2013
-                                    </p>
-                                    <p class="about__thumb-descr">Денеб отмечает
-                                    своё 25-летие</p>
-                                </div>
-                                <div class="about__thumb-progress"></div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="about__thumb-wrapper">
-                                <div class="about__thumb-data">
-                                    <p class="about__thumb-year">
-                                    2008
-                                    </p>
-                                    <p class="about__thumb-descr">Денеб отмечает
-                                    своё 25-летие</p>
-                                </div>
-                                <div class="about__thumb-progress"></div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="about__thumb-wrapper">
-                                <div class="about__thumb-data">
-                                    <p class="about__thumb-year">
-                                    2003
-                                    </p>
-                                    <p class="about__thumb-descr">Денеб отмечает
-                                    своё 25-летие</p>
-                                </div>
-                                <div class="about__thumb-progress"></div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="about__thumb-wrapper">
-                                <div class="about__thumb-data">
-                                    <p class="about__thumb-year">
-                                    1997
-                                    </p>
-                                    <p class="about__thumb-descr">Денеб отмечает
-                                    своё 25-летие</p>
-                                </div>
-                                <div class="about__thumb-progress"></div>
-                            </div>
+                <div class="history__wrapper">
+                    <div class="history__block">
+                        <div class="content">
+                            <p>
+                                Впервые наша продукция появилась на витринах и прилавках в 1997 году. С тех пор мы изо всех сил стараемся укреплять любовь людей к нашим безалкогольным напиткам.
+                                <br><br>
+                                Год от года мы развивались, расширяли производство и ассортимент. Обновляли форму и содержание наших напитков. Вслед за классической серией Gold появились функциональные напитки defito с традиционными для Кавказа вкусами шиповника, кураги, кизила, фейхоа, граната.
+                                <br><br>
+                                Они действительно натуральные и полезные, это подтверждено клиническими исследованиями Пятигорского государственного института курортологии ФГБУ ФМБА в 2013 году.
+                                <br><br>
+                                Сегодня мы производим более 120 наименований напитков, рассчитанных на людей с разными вкусами и интересами.
+                                <br><br>
+                                Наша особая гордость – природная питьевая вода «Горная». Она рождается высоко в ледниках Кавказа, а горные реки доносят ее до города естественным образом, где мы очищаем ее самым современным и безопасным способом, используя ультрафильтрацию, сохраняя всю пользу и вкус.
+                                <br><br>
+                                Собственный научно-исследовательский центр нашей компании находится в постоянном процессе разработки новых вкусов, контроля и улучшения качества выпускаемой продукции.
+                                <br><br>
+                                <br><br>
+                                «Денеб» – это эмоции!
+                                <br><br>
+                                Уже более 25 лет мы радуем всех, выпуская очень вкусные безалкогольные напитки. Они стали частью потребительской культуры целого поколения россиян. Детские эмоции от сладкой газировки «Денеб» просыпаются даже у взрослых!
+                                <br><br>
+                                «Денеб» – это связь с Дагестаном для тех, кто далеко от него, и визитная карточка для тех, кто решил с ним впервые познакомиться.
+                                <br><br>
+                                «Денеб» – это качество!
+                                <br><br>
+                                В производстве напитков мы используем натуральные ингредиенты и компоненты премиум-качества. Все напитки создаются на основе природной питьевой воды «Горная», которая проходит несколько ступеней очистки. Натуральные ягоды и фрукты – основа функциональных напитков «Денеб». Лаборатория завода в непрерывном режиме мониторит выпускаемую продукцию на предмет соблюдения всех стандартов.
+                                <br><br>
+                                «Денеб» – это технологии!
+                                <br><br>
+                                Мы работаем на современном оборудовании и агрегатах ведущих мировых брендов Sidel, KHS, AF, Bardi. Это позволяет нам производить до 30 тысяч бутылок в час и обеспечивать своевременными поставками всех наших партнеров.
+                                <br><br>
+                                «Денеб» – это команда! 
+                                <br><br>
+                                В штате завода более 400 специалистов, компетенции и навыки которых систематически улучшаются в рамках корпоративных программ повышения квалификации.
+                                <br><br>
+                                Наш основатель Гаджимурад Магомедов заложил принцип, когда к работе в компании приглашаются признанные специалисты в своих отраслях. Со временем мы перешли к системе выращивания собственных кадров.
+                                <br><br>
+                                «Денеб» – это доверие!
+                                <br><br>
+                                Первые дети, выросшие на напитках «Денеб», уже сами стали родителями и остаются верны нашим напиткам, поэтому прививают и в своих детях любовь к ним. Мы сохраняем качество и вкус своих напитков неизменными, несмотря ни на что.
+                                <br><br>
+                                «Денеб» – это ответственность!
+                                <br><br>
+                                Компания регулярно участвует в благотворительных акциях крупнейших благотворительных фондов, а также проводит свои программы поддержки тех, кому необходима помощь. «Денеб» поддерживает образование, спорт, культуру и творчество.
+                            </p>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
+        <!-- end of history -->
     </div>
-    <!-- end of about -->
+    <!-- end of wrapper -->
+    <!-- footer -->
+    <footer class="footer" id="footer">
+        <picture class="footer__sign">
+            <img src="img/dist/logotype-circle.svg" alt="deneb">
+        </picture>
+        <div class="footer__top">
+            <nav class="footer-nav">
+                <ul class="footer-nav__list">
+                    <li class="footer-nav__item">
+                        <a href="#" class="footer-nav__link">Партнёры</a>
+                    </li>
+                    <li class="footer-nav__item">
+                        <a href="#" class="footer-nav__link">Соцсети</a>
+                    </li>
+                    <li class="footer-nav__item">
+                        <a href="products.html" class="footer-nav__link">Напитки</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="footer__bottom">
+            <ul class="footer__list">
+                <li class="footer__item">
+                    <a href="contacts.html" class="footer__link">Контакты</a>
+                </li>
+                <li class="footer__item">
+                    <a href="about.html" class="footer__link">О компании</a>
+                </li>
+                <li class="footer__item">
+                    <a href="#" class="footer__link">Политика конфиденциальности</a>
+                </li>
+                <li class="footer__item">
+                    <a href="documents.html" class="footer__link">Документы</a>
+                </li>
+                <li class="footer__item">
+                    <p class="footer__copyright">© 1997–2022</p>
+                </li>
+            </ul>
+        </div>
+    </footer>
+    <!-- end of footer -->
     <!-- scripts -->
     <script src="js/vendor.min.js"></script>
     <script src="js/app.min.js"></script>
