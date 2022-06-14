@@ -111,7 +111,12 @@
                                     <pre class="main__title">     Эксперт<br> по утолению<br>           жажды</pre>
                                 </div>
                             </div>
-                            <div class="swiper-slide" style="background-image: url(img/dist/main-bg-glassy.jpg);"></div>
+                            <div class="swiper-slide">
+                                <picture class="main__bg">
+                                    <source srcset="img/dist/main-bg-glassy.jpg" media="(min-width: 1024px)">
+                                    <img src="img/dist/main-bg-glassy-mobile.jpg" alt="Image">
+                                </picture>
+                            </div>
                             <div class="swiper-slide" style="background-color: #192235">
                                 <div class="main__slide main__slide--limit">
                                     <div class="main__body">
@@ -128,8 +133,17 @@
                                     </a>
                                 </div>
                             </div>
-                            <div class="swiper-slide" style="background-image: url(img/dist/main-bg.jpg);"></div>
-                            <div class="swiper-slide mendi" style="background-image: url(img/dist/main-bg-mendi.jpg);"></div>
+                            <div class="swiper-slide">
+                                <picture class="main__bg">
+                                    <img src="img/dist/main-bg.jpg" alt="Image">
+                                </picture>
+                            </div>
+                            <div class="swiper-slide">
+                                <picture class="main__bg main__bg--top-mobile">
+                                    <source srcset="img/dist/main-bg-mendi.jpg" media="(min-width: 1024px)">
+                                    <img src="img/dist/main-bg-mendi-mobile.jpg" alt="Image">
+                                </picture>
+                            </div>
                         </div>
                         <div class="swiper-progress">
                             <div class="swiper-pagination"></div>
