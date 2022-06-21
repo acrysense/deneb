@@ -119,7 +119,7 @@
                         </div>
                     </div>
                     <!-- ambassador -->
-                    <a href="#" class="c-ambassador community__ambassador">Стать амбассадором Денеб</a>
+                    <a href="#" class="c-ambassador community__ambassador popup-btn" data-id="application">Стать амбассадором Денеб</a>
                     <!-- end of ambassador -->
                 </div>
             </div>
@@ -169,13 +169,46 @@
     </footer>
     <!-- end of footer -->
     <!-- popup -->
-    <div class="popup" data-id="application">
-        <div class="popup__wrapper">
-            <h3 class="popup__title">Заполните <br>заявку</h3>
-            <button class="popup__close" aria-label="Закрыть"></button>
+    <div class="popup" id="application">
+        <div class="popup__scroll">
+            <div class="popup__wrapper">
+                <div class="popup__top">
+                    <h3 class="popup__title">Заполните <br>заявку</h3>
+                    <button class="popup__close" aria-label="Закрыть">
+                        <span class="popup__close-inner"></span>
+                        <span class="popup__close-inner"></span>
+                    </button>
+                </div>
+                <form action="#" class="popup-form">
+                    <div class="popup-form__wrapper">
+                        <div class="input-group popup-form__input">
+                            <input type="text" class="popup-form__input input-group__input" id="popup-name" placeholder="Ваше имя" required>
+                            <label for="popup-name" class="input-group__label">Ваше имя</label>
+                        </div>
+                        <div class="input-group popup-form__input">
+                            <input type="text" class="popup-form__input input-group__input" id="popup-surname" placeholder="Фамилия" required>
+                            <label for="popup-surname" class="input-group__label">Фамилия</label>
+                        </div>
+                        <div class="input-group popup-form__input">
+                            <input type="email" class="popup-form__input input-group__input" id="popup-email" placeholder="Почта" required>
+                            <label for="popup-email" class="input-group__label">Почта</label>
+                        </div>
+                        <div class="input-group popup-form__input">
+                            <input type="tel" class="popup-form__input input-group__input" id="popup-tel" placeholder="Телефон" data-inputmask="'mask': '+7 (999) 999-99-99'" required>
+                            <label for="popup-tel" class="input-group__label">Телефон</label>
+                        </div>
+                    </div>
+                    <button class="popup-form__btn ellipse-btn">
+                        <span>Отправить</span>
+                        <svg>
+                            <use xlink:href="img/dist/sprite.svg#icon-arrow-more"></use>
+                        </svg>
+                    </button>
+                </form>
+            </div>
         </div>
+        <div class="popup__overlay"></div>
     </div>
-    <div class="popup-overlay"></div>
     <!-- end of popup -->
     <!-- scripts -->
     <script src="js/vendor.min.js"></script>
