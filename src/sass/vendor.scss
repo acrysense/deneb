@@ -1,0 +1,32 @@
+// fonts load section
+@mixin font($fname, $fstyle, $fweight, $furl1, $furl2, $furl3) {
+	@font-face {
+		font-family: $fname;
+		font-style: $fstyle;
+		font-weight: $fweight;
+		font-display: swap;
+        src: local($fname), url($furl1) format('woff2'), url($furl2) format('woff'), url($furl3) format('embedded-opentype');
+    }
+}
+
+@include font('Lato', normal, 100, '../fonts/Lato/Lato-Thin.woff2', '../fonts/Lato/Lato-Thin.woff', '../fonts/Lato/Lato-Thin.eot');
+@include font('Lato', normal, 300, '../fonts/Lato/Lato-Light.woff2', '../fonts/Lato/Lato-Light.woff', '../fonts/Lato/Lato-Light.eot');
+@include font('Lato', normal, 400, '../fonts/Lato/Lato-Regular.woff2', '../fonts/Lato/Lato-Regular.woff', '../fonts/Lato/Lato-Regular.eot');
+@include font('Lato', normal, 500, '../fonts/Lato/Lato-Medium.woff2', '../fonts/Lato/Lato-Medium.woff', '../fonts/Lato/Lato-Medium.eot');
+@include font('Lato', normal, 600, '../fonts/Lato/Lato-Semibold.woff2', '../fonts/Lato/Lato-Semibold.woff', '../fonts/Lato/Lato-Semibold.eot');
+@include font('Lato', normal, 700, '../fonts/Lato/Lato-Bold.woff2', '../fonts/Lato/Lato-Bold.woff', '../fonts/Lato/Lato-Bold.eot');
+@include font('Lato', normal, 800, '../fonts/Lato/Lato-Heavy.woff2', '../fonts/Lato/Lato-Heavy.woff', '../fonts/Lato/Lato-Heavy.eot');
+@include font('Lato', normal, 900, '../fonts/Lato/Lato-Black.woff2', '../fonts/Lato/Lato-Black.woff', '../fonts/Lato/Lato-Black.eot');
+
+@include font('Druk Text Wide Cyr', normal, 900, '../fonts/DrukWide/DrukTextWideCyr-Heavy.woff2', '../fonts/DrukWide/DrukTextWideCyr-Heavy.woff', '../fonts/DrukWide/DrukTextWideCyr-Heavy.eot');
+@include font('Druk Text Wide Cyr', italic, 700, '../fonts/DrukWide/DrukTextWideCyr-SuperItalic.woff2', '../fonts/DrukWide/DrukTextWideCyr-SuperItalic.woff', '../fonts/DrukWide/DrukTextWideCyr-SuperItalic.eot');
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Commissioner:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+// import section
+@import 'node_modules/bootstrap/scss/bootstrap-reboot.scss'; // bootstrap reboot collection
+@import 'node_modules/swiper/swiper-bundle.min'; // swiper
+@import 'node_modules/slim-select/dist/slimselect'; // slim select
+@import 'node_modules/simplebar/dist/simplebar'; // simplebar
+@import 'node_modules/aos/dist/aos'; // aos

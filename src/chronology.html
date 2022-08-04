@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>deneb - Хронология</title>
+    <!-- styles -->
+    <style>
+        .loader {
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            z-index: 1100;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            width: 100%;
+            height: 100%;
+            background: rgba(64, 68, 69, 0.9);
+            -webkit-backdrop-filter: blur(30px);
+            backdrop-filter: blur(30px);
+            transition: all 0.25s ease-in-out;
+        }
+        .loader--hidden {
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+        .loader__wrapper {
+            text-align: center;
+        }
+        .loader__logotype {
+            margin: 0 auto;
+            max-width: 206px;
+            width: 100%;
+        }
+    </style>
+    <link rel="stylesheet" href="css/vendor.min.css">
+    <link rel="stylesheet" href="css/app.min.css">
+</head>
+<body>
+    <!-- loader -->
+    <div class="loader" id="loader">
+        <div class="loader__wrapper">
+            <picture class="loader__logotype">
+                <img src="img/dist/loader.svg" width="206px" height="62px" alt="deneb">
+            </picture>
+        </div>
+    </div>
+    <!-- end of loader -->
+    <!-- header -->
+    <header class="header" id="header">
+        <a href="index.html" class="logotype header__logotype">
+            <img src="img/dist/logotype-black.svg" alt="deneb" width="78px" height="37px" class="header__logotype--static">
+            <img src="img/dist/logotype-purple.svg" alt="deneb" width="78px" height="37px" class="header__logotype--menu">
+        </a>
+        <button class="hamburger" id="hamburger-toggle" aria-label="Меню">
+            <span class="hamburger__inner"></span>
+            <span class="hamburger__inner"></span>
+        </button>
+        <div class="header__inner">
+            <div class="header__scroll">
+                <button class="language" aria-label="Язык">EN</button>
+                <nav class="nav">
+                    <ul class="nav__list">
+                        <li class="nav__item">
+                            <a href="index.html" class="nav__link">Главная</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="about.html" class="nav__link">О компании</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="products.html" class="nav__link">Напитки</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="community.html" class="nav__link">Сообщество</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="events.html" class="nav__link">Мероприятия</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="contacts.html" class="nav__link">Контакты</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <!-- end of header -->
+    <!-- chronology -->
+    <div class="chronology" id="chronology">
+        <div class="chronology__slider">
+            <div class="swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="img/dist/chronology-01.jpg" alt="Image">
+                        <div class="chronology__thumb-wrapper">
+                            <div class="chronology__thumb-data">
+                                <span class="chronology__thumb-year">2022</span>
+                                <p class="chronology__thumb-descr">Денеб отмечает <br>своё 25-летие</p>
+                            </div>
+                            <div class="chronology__thumb-progress"></div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="img/dist/chronology-02.jpg" alt="Image">
+                        <div class="chronology__thumb-wrapper">
+                            <div class="chronology__thumb-data">
+                                <span class="chronology__thumb-year">2021</span>
+                                <p class="chronology__thumb-descr">Ребрейдинг воды <br>«Горной»</p>
+                            </div>
+                            <div class="chronology__thumb-progress"></div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="img/dist/chronology-03.jpg" alt="Image">
+                        <div class="chronology__thumb-wrapper">
+                            <div class="chronology__thumb-data">
+                                <span class="chronology__thumb-year">2020</span>
+                                <p class="chronology__thumb-descr">"Денеб" - системообразующее <br>предприятие Дагестана</p>
+                            </div>
+                            <div class="chronology__thumb-progress"></div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="img/dist/chronology-04.jpg" alt="Image">
+                        <div class="chronology__thumb-wrapper">
+                            <div class="chronology__thumb-data">
+                                <span class="chronology__thumb-year">2013</span>
+                                <p class="chronology__thumb-descr">полезные свойства напитков DeFito подтверждена ученными</p>
+                            </div>
+                            <div class="chronology__thumb-progress"></div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="img/dist/chronology-05.jpg" alt="Image">
+                        <div class="chronology__thumb-wrapper">
+                            <div class="chronology__thumb-data">
+                                <span class="chronology__thumb-year">2006</span>
+                                <p class="chronology__thumb-descr">"Менди" - первый дагестанский холодный чай взрывает рынок</p>
+                            </div>
+                            <div class="chronology__thumb-progress"></div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="img/dist/chronology-06.jpg" alt="Image">
+                        <div class="chronology__thumb-wrapper">
+                            <div class="chronology__thumb-data">
+                                <span class="chronology__thumb-year">2003</span>
+                                <p class="chronology__thumb-descr">наши технологи создали функциональные напитки DeFito</p>
+                            </div>
+                            <div class="chronology__thumb-progress"></div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="img/dist/chronology-07.jpg" alt="Image">
+                        <div class="chronology__thumb-wrapper">
+                            <div class="chronology__thumb-data">
+                                <span class="chronology__thumb-year">1997</span>
+                                <p class="chronology__thumb-descr">"Горная". Начало. </p>
+                            </div>
+                            <div class="chronology__thumb-progress"></div>
+                        </div>
+                    </div>
+                </div>
+                <button class="swiper-button-next" aria-label="Далее">
+                    <svg class="swiper-button-icon">
+                        <use xlink:href="img/dist/sprite.svg#icon-arrow-next-black"></use>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+    <!-- end of chronology -->
+    <!-- scripts -->
+    <script src="js/vendor.min.js"></script>
+    <script src="js/app.min.js"></script>
+</body>
+</html>

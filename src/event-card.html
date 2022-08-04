@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>deneb - Карточка мероприятия</title>
+    <!-- styles -->
+    <style>
+        .loader {
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            z-index: 1100;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            width: 100%;
+            height: 100%;
+            background: rgba(64, 68, 69, 0.9);
+            -webkit-backdrop-filter: blur(30px);
+            backdrop-filter: blur(30px);
+            transition: all 0.25s ease-in-out;
+        }
+        .loader--hidden {
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+        .loader__wrapper {
+            text-align: center;
+        }
+        .loader__logotype {
+            margin: 0 auto;
+            max-width: 206px;
+            width: 100%;
+        }
+    </style>
+    <link rel="stylesheet" href="css/vendor.min.css">
+    <link rel="stylesheet" href="css/app.min.css">
+</head>
+<body>
+    <!-- loader -->
+    <div class="loader" id="loader">
+        <div class="loader__wrapper">
+            <picture class="loader__logotype">
+                <img src="img/dist/loader.svg" width="206px" height="62px" alt="deneb">
+            </picture>
+        </div>
+    </div>
+    <!-- end of loader -->
+    <div id="scroll-animate">
+        <div id="scroll-animate-main">
+            <div class="wrapper-parallax">
+                <!-- header -->
+                <header class="header" id="header">
+                    <a href="index.html" class="logotype header__logotype">
+                        <img src="img/dist/logotype-black.svg" alt="deneb" width="78px" height="37px" class="header__logotype--static">
+                        <img src="img/dist/logotype-purple.svg" alt="deneb" width="78px" height="37px" class="header__logotype--menu">
+                    </a>
+                    <button class="hamburger" id="hamburger-toggle" aria-label="Меню">
+                        <span class="hamburger__inner"></span>
+                        <span class="hamburger__inner"></span>
+                    </button>
+                    <div class="header__inner">
+                        <div class="header__scroll">
+                            <button class="language" aria-label="Язык">EN</button>
+                            <nav class="nav">
+                                <ul class="nav__list">
+                                    <li class="nav__item">
+                                        <a href="index.html" class="nav__link">Главная</a>
+                                    </li>
+                                    <li class="nav__item">
+                                        <a href="about.html" class="nav__link">О компании</a>
+                                    </li>
+                                    <li class="nav__item">
+                                        <a href="products.html" class="nav__link">Напитки</a>
+                                    </li>
+                                    <li class="nav__item">
+                                        <a href="community.html" class="nav__link">Сообщество</a>
+                                    </li>
+                                    <li class="nav__item">
+                                        <a href="events.html" class="nav__link">Мероприятия</a>
+                                    </li>
+                                    <li class="nav__item">
+                                        <a href="contacts.html" class="nav__link">Контакты</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </header>
+                <!-- end of header -->
+                <!-- main -->
+                <div class="main" id="main">
+                    <div class="swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <picture class="main__bg">
+                                    <img src="img/dist/event-slide.jpg" alt="Image">
+                                </picture>
+                                <div class="main__slide main__slide--ultra">
+                                    <div class="main__body">
+                                        <span class="main__date">25.02.21</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <picture class="main__bg">
+                                    <img src="img/dist/event-slide.jpg" alt="Image">
+                                </picture>
+                                <div class="main__slide main__slide--ultra">
+                                    <div class="main__body">
+                                        <span class="main__date">16.01.21</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-progress swiper-progress--right">
+                            <div class="swiper-pagination"></div>
+                            <div class="swiper-progress-bar">
+                                <span class="slide-progress-bar"></span>
+                            </div>
+                        </div>
+                        <div class="swiper-buttons">
+                            <div class="swiper-button-prev" aria-label="Назад">
+                                <svg class="swiper-button-icon">
+                                    <use xlink:href="img/dist/sprite.svg#icon-arrow-prev-white"></use>
+                                </svg>
+                            </div>
+                            <div class="swiper-button-next" aria-label="Далее">
+                                <svg class="swiper-button-icon">
+                                    <use xlink:href="img/dist/sprite.svg#icon-arrow-next-white"></use>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- end of main -->
+                <!-- parallax content -->
+                <div class="parallax-content" id="parallax-content">
+                    <!-- inner page -->
+                    <section class="inner-page" id="inner-page">
+                        <div class="container">
+                            <div class="section-heading">
+                                <h2 class="section-heading__title">Прошло мероприятие <br>по триатлону посвященный <br>ярким событиям</h2>
+                            </div>
+                            <div class="inner-page__content content">
+                                <p>Особой гордостью компании стала природная питьевая вода «Горная», являющаяся лидером рынка чистой негазированной воды и ставшая нарицательным названием в республике для всей бутилированной воды.</p>
+                                <p>Особой гордостью компании стала природная питьевая вода «Горная», являющаяся лидером рынка чистой негазиров</p>
+                            </div>
+                            <h3 class="inner-page__subtitle">Мероприятие по Треатлону прошла но осталось море впечатлений</h3>
+                        </div>
+                    </section>
+                    <!-- end of inner page -->
+                    <!-- team -->
+                    <section class="team" id="team">
+                        <div class="container container--lg">
+                            <div class="team__wrapper">
+                                <a href="#" class="team__item img-open">
+                                    <img src="img/dist/events-01.jpg" alt="Image" class="team__img">
+                                </a>
+                                <a href="#" class="team__item img-open">
+                                    <img src="img/dist/team-02.jpg" alt="Image" class="team__img">
+                                </a>
+                                <a href="#" class="team__item img-open">
+                                    <img src="img/dist/team-03.jpg" alt="Image" class="team__img">
+                                </a>
+                                <a href="#" class="team__item img-open">
+                                    <img src="img/dist/team-04.jpg" alt="Image" class="team__img">
+                                </a>
+                                <a href="#" class="team__item img-open">
+                                    <img src="img/dist/team-05.jpg" alt="Image" class="team__img">
+                                </a>
+                                <a href="#" class="team__item img-open">
+                                    <img src="img/dist/events-02.jpg" alt="Image" class="team__img">
+                                </a>
+                                <a href="#" class="team__item img-open">
+                                    <img src="img/dist/events-03.jpg" alt="Image" class="team__img">
+                                </a>
+                                <a href="#" class="team__item img-open">
+                                    <img src="img/dist/events-04.jpg" alt="Image" class="team__img">
+                                </a>
+                                <a href="#" class="team__item img-open">
+                                    <img src="img/dist/events-05.jpg" alt="Image" class="team__img">
+                                </a>
+                                <a href="#" class="team__item img-open">
+                                    <img src="img/dist/events-06.jpg" alt="Image" class="team__img">
+                                </a>
+                                <a href="#" class="team__item img-open">
+                                    <img src="img/dist/events-07.jpg" alt="Image" class="team__img">
+                                </a>
+                                <a href="#" class="team__item img-open">
+                                    <img src="img/dist/events-08.jpg" alt="Image" class="team__img">
+                                </a>
+                                <a href="#" class="team__item img-open">
+                                    <img src="img/dist/team-13.jpg" alt="Image" class="team__img">
+                                </a>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- end of team -->
+                </div>
+                <!-- end of parallax content -->
+                <!-- footer -->
+                <footer class="footer footer--parallax" id="footer">
+                    <div class="footer__top">
+                        <nav class="footer-nav">
+                            <ul class="footer-nav__list">
+                                <li class="footer-nav__item">
+                                    <a href="#" class="footer-nav__link">Партнёры</a>
+                                </li>
+                                <li class="footer-nav__item">
+                                    <a href="#" class="footer-nav__link">Соцсети</a>
+                                </li>
+                                <li class="footer-nav__item">
+                                    <a href="products.html" class="footer-nav__link">Напитки</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="footer__bottom">
+                        <ul class="footer__list">
+                            <li class="footer__item">
+                                <a href="contacts.html" class="footer__link">Контакты</a>
+                            </li>
+                            <li class="footer__item">
+                                <a href="about.html" class="footer__link">О компании</a>
+                            </li>
+                            <li class="footer__item">
+                                <a href="#" class="footer__link">Политика конфиденциальности</a>
+                            </li>
+                            <li class="footer__item">
+                                <a href="documents.html" class="footer__link">Документы</a>
+                            </li>
+                            <li class="footer__item">
+                                <p class="footer__copyright">© 1997–2022</p>
+                            </li>
+                        </ul>
+                    </div>
+                </footer>
+                <!-- end of footer -->
+            </div>
+        </div>
+    </div>
+    <!-- img popup -->
+    <div class="img-popup" id="img-popup">
+        <picture class="img-popup__image">
+            <img src="" alt="Image">
+            <button class="img-popup__close" aria-label="Закрыть">
+                <span class="img-popup__close-inner"></span>
+                <span class="img-popup__close-inner"></span>
+            </button>
+        </picture>
+        <div class="img-popup__overlay"></div>
+    </div>
+    <!-- end of img popup -->
+    <!-- scripts -->
+    <script src="js/vendor.min.js"></script>
+    <script src="js/app.min.js"></script>
+</body>
+</html>

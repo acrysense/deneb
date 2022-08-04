@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>deneb - Контакты</title>
+    <!-- styles -->
+    <style>
+        .loader {
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            z-index: 1100;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            width: 100%;
+            height: 100%;
+            background: rgba(64, 68, 69, 0.9);
+            -webkit-backdrop-filter: blur(30px);
+            backdrop-filter: blur(30px);
+            transition: all 0.25s ease-in-out;
+        }
+        .loader--hidden {
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+        .loader__wrapper {
+            text-align: center;
+        }
+        .loader__logotype {
+            margin: 0 auto;
+            max-width: 206px;
+            width: 100%;
+        }
+    </style>
+    <link rel="stylesheet" href="css/vendor.min.css">
+    <link rel="stylesheet" href="css/app.min.css">
+</head>
+<body>
+    <!-- loader -->
+    <div class="loader" id="loader">
+        <div class="loader__wrapper">
+            <picture class="loader__logotype">
+                <img src="img/dist/loader.svg" width="206px" height="62px" alt="deneb">
+            </picture>
+        </div>
+    </div>
+    <!-- end of loader -->
+    <!-- header -->
+    <header class="header header--white" id="header">
+        <a href="index.html" class="logotype header__logotype">
+            <img src="img/dist/logotype-white.svg" alt="deneb" width="78px" height="37px" class="header__logotype--static">
+            <img src="img/dist/logotype-purple.svg" alt="deneb" width="78px" height="37px" class="header__logotype--menu">
+        </a>
+        <button class="hamburger" id="hamburger-toggle" aria-label="Меню">
+            <span class="hamburger__inner"></span>
+            <span class="hamburger__inner"></span>
+        </button>
+        <div class="header__inner">
+            <div class="header__scroll">
+                <button class="language" aria-label="Язык">EN</button>
+                <nav class="nav">
+                    <ul class="nav__list">
+                        <li class="nav__item">
+                            <a href="index.html" class="nav__link">Главная</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="about.html" class="nav__link">О компании</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="products.html" class="nav__link">Напитки</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="community.html" class="nav__link">Сообщество</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="events.html" class="nav__link">Мероприятия</a>
+                        </li>
+                        <li class="nav__item nav__item--active">
+                            <a href="contacts.html" class="nav__link">Контакты</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <!-- end of header -->
+    <!-- wrapper -->
+    <div class="wrapper wrapper--no-padding">
+        <!-- contacts -->
+        <div class="contacts" id="contacts">
+            <div class="contacts__main" style="background-image: url(img/dist/contacts-bg.jpg);"></div>
+            <div class="contacts__wrap">
+                <div class="container">
+                    <div class="c-accordeon">
+                        <div class="c-accordeon__item is--open">
+                            <h2 class="c-accordeon__trigger" style="pointer-events: auto;">Горячая линия</h2>
+                            <div class="c-accordeon__wrapper" style="display: block;">
+                                <div class="content contacts__content">
+                                    <p>
+                                        <a href="tel:88006000999">8 800 600-09-99</a> Бесплатный единый номер<br>
+                                        <a href="tel:+78722600099">+7 8722 60-00-99</a> Единый номер
+                                        <br><br>
+                                        <a href="tel:+78722600099">+7 8722 60-00-99</a> (Доп.номера: 161, 162, 163)<br>
+                                        Отдел снабжения
+                                        <br><br>
+                                        <a href="tel:+78722600099">+7 8722 60-00-99</a> (Доп.номера: 181, 182, 183, 184, 185) Продажи за пределы республики Дагестан
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="c-accordeon__item">
+                            <h2 class="c-accordeon__trigger">Связь для партнеров</h2>
+                            <div class="c-accordeon__wrapper">
+                                <div class="content contacts__content">
+                                    <p>
+                                        <a href="tel:88006000999">8 800 600-09-99</a> Бесплатный единый номер<br>
+                                        <a href="tel:+78722600099">+7 8722 60-00-99</a> Единый номер
+                                        <br><br>
+                                        <a href="tel:+78722600099">+7 8722 60-00-99</a> (Доп.номера: 161, 162, 163)<br>
+                                        Отдел снабжения
+                                        <br><br>
+                                        <a href="tel:+78722600099">+7 8722 60-00-99</a> (Доп.номера: 181, 182, 183, 184, 185) Продажи за пределы республики Дагестан
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="c-accordeon__item">
+                            <h2 class="c-accordeon__trigger">для сми</h2>
+                            <div class="c-accordeon__wrapper">
+                                <div class="content contacts__content">
+                                    <p>
+                                        <a href="tel:88006000999">8 800 600-09-99</a> Бесплатный единый номер<br>
+                                        <a href="tel:+78722600099">+7 8722 60-00-99</a> Единый номер
+                                        <br><br>
+                                        <a href="tel:+78722600099">+7 8722 60-00-99</a> (Доп.номера: 161, 162, 163)<br>
+                                        Отдел снабжения
+                                        <br><br>
+                                        <a href="tel:+78722600099">+7 8722 60-00-99</a> (Доп.номера: 181, 182, 183, 184, 185) Продажи за пределы республики Дагестан
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="c-accordeon__item">
+                            <h2 class="c-accordeon__trigger">Карьера</h2>
+                            <div class="c-accordeon__wrapper">
+                                <div class="content contacts__content">
+                                    <p>Анкета соискателей / гугл форма / <a href="mailto:hr@deneb.ru" class="green-link">hr@deneb.ru</a></p>
+                                </div>
+                                <form action="#" class="survey-form">
+                                    <div class="input-group survey-form__input">
+                                        <input type="text" class="input-group__input" id="survey-name" placeholder="ФИО (полностью)" required>
+                                        <label for="survey-name" class="input-group__label">ФИО (полностью)</label>
+                                    </div>
+                                    <div class="input-group survey-form__input">
+                                        <input type="number" class="input-group__input" id="survey-age" placeholder="Возраст" required>
+                                        <label for="survey-age" class="input-group__label">Возраст</label>
+                                    </div>
+                                    <div class="input-group survey-form__input">
+                                        <input type="email" class="input-group__input" id="survey-email" placeholder="Адрес электронной почты" required>
+                                        <label for="survey-email" class="input-group__label">Адрес электронной почты</label>
+                                    </div>
+                                    <div class="input-group survey-form__input">
+                                        <input type="tel" class="input-group__input" id="survey-tel" placeholder="Контактный номер телефона" data-inputmask="'mask': '+7 (999) 999-99-99'" required>
+                                        <label for="survey-tel" class="input-group__label">Контактный номер телефона</label>
+                                    </div>
+                                    <div class="input-group survey-form__input">
+                                        <input type="text" class="input-group__input" id="survey-company" placeholder="Компания, в которой вы работали ранее (при наличии опыта работы)" required>
+                                        <label for="survey-company" class="input-group__label">Компания, в которой вы работали ранее (при наличии опыта работы)</label>
+                                    </div>
+                                    <div class="input-group survey-form__input">
+                                        <input type="text" class="input-group__input" id="survey-position" placeholder="Должность, на которой вы работали ранее (при наличии опыта работы)" required>
+                                        <label for="survey-position" class="input-group__label">Должность, на которой вы работали ранее (при наличии опыта работы)</label>
+                                    </div>
+                                    <div class="survey-form__checkboxes">
+                                        <h3 class="survey-form__title">Какая вакансия могла бы вас заинтересовать?</h3>
+                                        <label class="circle-checkbox survey-form__checkbox" for="survey-checkbox-01">
+                                            <input class="circle-checkbox__input" type="checkbox" id="survey-checkbox-01">
+                                            <span class="circle-checkbox__icon"></span>
+                                            <span class="circle-checkbox__label">Водитель</span>
+                                        </label>
+                                        <label class="circle-checkbox survey-form__checkbox" for="survey-checkbox-02">
+                                            <input class="circle-checkbox__input" type="checkbox" id="survey-checkbox-02">
+                                            <span class="circle-checkbox__icon"></span>
+                                            <span class="circle-checkbox__label">Водитель автопогрузчика</span>
+                                        </label>
+                                        <label class="circle-checkbox survey-form__checkbox" for="survey-checkbox-03">
+                                            <input class="circle-checkbox__input" type="checkbox" id="survey-checkbox-03">
+                                            <span class="circle-checkbox__icon"></span>
+                                            <span class="circle-checkbox__label">Рабочий цеха</span>
+                                        </label>
+                                        <label class="circle-checkbox survey-form__checkbox" for="survey-checkbox-04">
+                                            <input class="circle-checkbox__input" type="checkbox" id="survey-checkbox-04">
+                                            <span class="circle-checkbox__icon"></span>
+                                            <span class="circle-checkbox__label">Рабочий склада</span>
+                                        </label>
+                                        <label class="circle-checkbox survey-form__checkbox" for="survey-checkbox-05">
+                                            <input class="circle-checkbox__input" type="checkbox" id="survey-checkbox-05">
+                                            <span class="circle-checkbox__icon"></span>
+                                            <span class="circle-checkbox__label">Механик-наладчик</span>
+                                        </label>
+                                        <label class="circle-checkbox survey-form__checkbox" for="survey-checkbox-06">
+                                            <input class="circle-checkbox__input" type="checkbox" id="survey-checkbox-06">
+                                            <span class="circle-checkbox__icon"></span>
+                                            <span class="circle-checkbox__label">Машинист компрессорного и производственного оборудования </span>
+                                        </label>
+                                        <label class="circle-checkbox survey-form__checkbox" for="survey-checkbox-07">
+                                            <input class="circle-checkbox__input" type="checkbox" id="survey-checkbox-07">
+                                            <span class="circle-checkbox__icon"></span>
+                                            <span class="circle-checkbox__label">Инженер-электронщик </span>
+                                        </label>
+                                        <label class="circle-checkbox survey-form__checkbox" for="survey-checkbox-08">
+                                            <input class="circle-checkbox__input" type="checkbox" id="survey-checkbox-08">
+                                            <span class="circle-checkbox__icon"></span>
+                                            <span class="circle-checkbox__label">Электромонтер </span>
+                                        </label>
+                                        <label class="circle-checkbox survey-form__checkbox" for="survey-checkbox-09">
+                                            <input class="circle-checkbox__input" type="checkbox" id="survey-checkbox-09">
+                                            <span class="circle-checkbox__icon"></span>
+                                            <span class="circle-checkbox__label">Оператор службы доставки </span>
+                                        </label>
+                                        <label class="circle-checkbox survey-form__checkbox" for="survey-checkbox-10">
+                                            <input class="circle-checkbox__input" type="checkbox" id="survey-checkbox-10">
+                                            <span class="circle-checkbox__icon"></span>
+                                            <span class="circle-checkbox__label">Экспедитор </span>
+                                        </label>
+                                        <label class="circle-checkbox survey-form__checkbox" for="survey-checkbox-11">
+                                            <input class="circle-checkbox__input" type="checkbox" id="survey-checkbox-11">
+                                            <span class="circle-checkbox__icon"></span>
+                                            <span class="circle-checkbox__label">Дизайнер </span>
+                                        </label>
+                                        <label class="circle-checkbox survey-form__checkbox" for="survey-checkbox-12">
+                                            <input class="circle-checkbox__input" type="checkbox" id="survey-checkbox-12">
+                                            <span class="circle-checkbox__icon"></span>
+                                            <span class="circle-checkbox__label">Фотограф, видеограф</span>
+                                        </label>
+                                        <label class="circle-checkbox survey-form__checkbox" for="survey-checkbox-13">
+                                            <input class="circle-checkbox__input" type="checkbox" id="survey-checkbox-13">
+                                            <span class="circle-checkbox__icon"></span>
+                                            <span class="circle-checkbox__label">Другое </span>
+                                        </label>
+                                    </div>
+                                    <button class="survey-form__btn ellipse-btn">
+                                        <span>Отправить</span>
+                                        <svg>
+                                            <use xlink:href="img/dist/sprite.svg#icon-arrow-more"></use>
+                                        </svg>
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contacts__bottom">
+                        <ul class="c-socials contacts__socials">
+                            <!--<li class="c-socials__item">
+                                <a href="#" class="c-socials__link">
+                                    <svg class="c-socials__icon c-socials__icon--instagram">
+                                        <use xlink:href="img/dist/sprite.svg#icon-instagram"></use>
+                                    </svg>
+                                </a>
+                            </li>-->
+                            <li class="c-socials__item">
+                                <a href="#" class="c-socials__link">
+                                    <svg class="c-socials__icon">
+                                        <use xlink:href="img/dist/sprite.svg#icon-telegram"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="c-socials__item">
+                                <a href="#" class="c-socials__link">
+                                    <svg class="c-socials__icon">
+                                        <use xlink:href="img/dist/sprite.svg#icon-vk"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                        </ul>
+                        <p class="contacts__description">Оставляйте комментарии в наших сотсетях, участвуйте в конкурсах, будьте в курсе всех новостей</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end of contacts -->
+    </div>
+    <!-- end of wrapper -->
+    <!-- footer -->
+    <footer class="footer" id="footer">
+        <div class="footer__top">
+            <nav class="footer-nav">
+                <ul class="footer-nav__list">
+                    <li class="footer-nav__item">
+                        <a href="#" class="footer-nav__link">Партнёры</a>
+                    </li>
+                    <li class="footer-nav__item">
+                        <a href="#" class="footer-nav__link">Соцсети</a>
+                    </li>
+                    <li class="footer-nav__item">
+                        <a href="products.html" class="footer-nav__link">Напитки</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="footer__bottom">
+            <ul class="footer__list">
+                <li class="footer__item">
+                    <a href="contacts.html" class="footer__link">Контакты</a>
+                </li>
+                <li class="footer__item">
+                    <a href="about.html" class="footer__link">О компании</a>
+                </li>
+                <li class="footer__item">
+                    <a href="#" class="footer__link">Политика конфиденциальности</a>
+                </li>
+                <li class="footer__item">
+                    <a href="documents.html" class="footer__link">Документы</a>
+                </li>
+                <li class="footer__item">
+                    <p class="footer__copyright">© 1997–2022</p>
+                </li>
+            </ul>
+        </div>
+    </footer>
+    <!-- end of footer -->
+    <!-- scripts -->
+    <script src="js/vendor.min.js"></script>
+    <script src="js/app.min.js"></script>
+</body>
+</html>

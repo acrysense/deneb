@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>deneb - Waterman</title>
+    <!-- styles -->
+    <style>
+        .loader {
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            z-index: 1100;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            width: 100%;
+            height: 100%;
+            background: rgba(64, 68, 69, 0.9);
+            -webkit-backdrop-filter: blur(30px);
+            backdrop-filter: blur(30px);
+            transition: all 0.25s ease-in-out;
+        }
+        .loader--hidden {
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+        .loader__wrapper {
+            text-align: center;
+        }
+        .loader__logotype {
+            margin: 0 auto;
+            max-width: 206px;
+            width: 100%;
+        }
+    </style>
+    <link rel="stylesheet" href="css/vendor.min.css">
+    <link rel="stylesheet" href="css/app.min.css">
+</head>
+<body>
+    <!-- loader -->
+    <div class="loader" id="loader">
+        <div class="loader__wrapper">
+            <picture class="loader__logotype">
+                <img src="img/dist/loader.svg" width="206px" height="62px" alt="deneb">
+            </picture>
+        </div>
+    </div>
+    <!-- end of loader -->
+    <div id="scroll-animate">
+        <div id="scroll-animate-main">
+            <div class="wrapper-parallax">
+                <!-- header -->
+                <header class="header header--white" id="header">
+                    <a href="index.html" class="logotype header__logotype">
+                        <img src="img/dist/logotype-white.svg" alt="deneb" width="78px" height="37px" class="header__logotype--static">
+                        <img src="img/dist/logotype-purple.svg" alt="deneb" width="78px" height="37px" class="header__logotype--menu">
+                    </a>
+                    <button class="hamburger" id="hamburger-toggle" aria-label="Меню">
+                        <span class="hamburger__inner"></span>
+                        <span class="hamburger__inner"></span>
+                    </button>
+                    <div class="header__inner">
+                        <div class="header__scroll">
+                            <button class="language" aria-label="Язык">EN</button>
+                            <nav class="nav">
+                                <ul class="nav__list">
+                                    <li class="nav__item nav__item--active">
+                                        <a href="index.html" class="nav__link">Главная</a>
+                                    </li>
+                                    <li class="nav__item">
+                                        <a href="about.html" class="nav__link">О компании</a>
+                                    </li>
+                                    <li class="nav__item">
+                                        <a href="products.html" class="nav__link">Напитки</a>
+                                    </li>
+                                    <li class="nav__item">
+                                        <a href="community.html" class="nav__link">Сообщество</a>
+                                    </li>
+                                    <li class="nav__item">
+                                        <a href="events.html" class="nav__link">Мероприятия</a>
+                                    </li>
+                                    <li class="nav__item">
+                                        <a href="contacts.html" class="nav__link">Контакты</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </header>
+                <!-- end of header -->
+                <!-- main -->
+                <div class="main" id="main" style="background-image: url(img/dist/waterman-bg.jpg);"></div>
+                <!-- end of main -->
+                <!-- parallax content -->
+                <div class="parallax-content" id="parallax-content">
+                    <!-- drinks about -->
+                    <div class="drinks-about" id="drinks-about">
+                        <div class="container">
+                            <div class="drinks-about__top">
+                                <picture class="drinks-about__logotype">
+                                    <img src="img/dist/logotypes/logotype-waterman.svg" width="278px" height="50px" alt="Waterman">
+                                </picture>
+                                <p class="drinks-about__description">
+                                    Waterman – лечебно-столовая хлоридно-гидрокарбонатно натриевая природная минеральная вода. Источник расположен в горах Южного Дагестана,
+                                </p>
+                                <div class="drinks-about__group">
+                                    <a href="products.html" class="drinks-about__btn btn">
+                                        <span>Торговые марки</span>
+                                        <svg>
+                                            <use xlink:href="img/dist/sprite.svg#icon-arrow-more"></use>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end of drinks about -->
+                    <!-- drinks -->
+                    <div class="drinks" id="drinks">
+                        <div class="drinks__wrap" style="--background-color: #F2FFFC; --box-shadow: linear-gradient(180deg, #E0F1ED 0%, rgba(242, 255, 252, 0) 100%); --logotype-color: #D9F5EF; --hover-bg: #BAEFE3;">
+                            <div class="container">
+                                <div class="section-heading">
+                                    <h1 class="section-heading__title">Хлоридно <br>гидрокарбонатно</h1>
+                                </div>
+                                <div class="drinks__wrapper">
+                                    <a href="#" class="drinks__item">
+                                        <picture class="drinks__img">
+                                            <img src="img/dist/drinks/waterman-01.png" alt="Image">
+                                        </picture>
+                                        <div class="drinks__body">
+                                            <span class="drinks__capacity">0,5л</span>
+                                            <span class="drinks__name">стекл. бут. <br>Груша</span>
+                                            <span class="drinks__help">код: 4606592003366</span>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="drinks__bottom">
+                                    <p class="drinks__description">
+                                        Транспортная упаковка, срок годности<br>
+                                        Транспортная упаковка: 1,5л – 6шт.; 0,6л, 0,45л. ст.б. – 12шт.; 6 л. – 1шт.<br>
+                                        Срок годности: питьевая вода – 12 мес.; Горная с лимоном – 5 мес.; <br>
+                                        Горная с яблоком и мятой, с манго, с айвой, с земляникой, с вишней, <br>
+                                        с клубникой и апельсином – 6 мес.
+                                    </p>
+                                    <a href="drinks-limpopo.html" class="drinks__next">
+                                        <svg>
+                                            <use xlink:href="img/dist/sprite.svg#icon-arrow-more"></use>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end of drinks -->
+                </div>
+                <!-- end of parallax content -->
+                <!-- footer -->
+                <footer class="footer footer--parallax" id="footer">
+                    <div class="footer__top">
+                        <nav class="footer-nav">
+                            <ul class="footer-nav__list">
+                                <li class="footer-nav__item">
+                                    <a href="#" class="footer-nav__link">Партнёры</a>
+                                </li>
+                                <li class="footer-nav__item">
+                                    <a href="#" class="footer-nav__link">Соцсети</a>
+                                </li>
+                                <li class="footer-nav__item">
+                                    <a href="products.html" class="footer-nav__link">Напитки</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="footer__bottom">
+                        <ul class="footer__list">
+                            <li class="footer__item">
+                                <a href="contacts.html" class="footer__link">Контакты</a>
+                            </li>
+                            <li class="footer__item">
+                                <a href="about.html" class="footer__link">О компании</a>
+                            </li>
+                            <li class="footer__item">
+                                <a href="#" class="footer__link">Политика конфиденциальности</a>
+                            </li>
+                            <li class="footer__item">
+                                <a href="documents.html" class="footer__link">Документы</a>
+                            </li>
+                            <li class="footer__item">
+                                <p class="footer__copyright">© 1997–2022</p>
+                            </li>
+                        </ul>
+                    </div>
+                </footer>
+                <!-- end of footer -->
+            </div>
+        </div>
+    </div>
+    <!-- scripts -->
+    <script src="js/vendor.min.js"></script>
+    <script src="js/app.min.js"></script>
+</body>
+</html>

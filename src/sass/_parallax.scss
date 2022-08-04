@@ -1,0 +1,82 @@
+#scroll-animate {
+    overflow: hidden;
+}
+
+#scroll-animate-main {
+    position: fixed;
+    left: 0;
+    width: 100%;
+    transition-property: all;
+    transition-duration: 0.4s;
+    transition-timing-function: cubic-bezier(0, 0, 0, 1);
+    will-change: top;
+}
+
+#heightPage,
+#heightScroll {
+    position: absolute;
+    top: 0;
+    z-index: 99;
+    width: 10px;
+}
+
+#heightPage {
+    left: 0;
+}
+
+#heightScroll {
+    right: 0;
+}
+
+.parallax-content {
+    position: relative;
+    z-index: 1;
+    background: $white-color;
+    border-radius: 20px;
+    & > *:first-child {
+        overflow: hidden;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+    }
+    & > *:last-child {
+        overflow: hidden;
+        border-bottom-right-radius: 20px;
+        border-bottom-left-radius: 20px;
+    }
+    &__sign {
+        position: absolute;
+        bottom: -135px;
+        max-width: 258px;
+        width: 100%;
+        height: 258px;
+        img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        @media screen and (min-width: 1930px) {
+            left: calc(50% - 830px);
+            transform: translateX(-50%);
+        }
+        @media screen and (max-width: 1929px) {
+            left: 20px;
+        }
+        @media screen and (min-width: 1200px) and (max-width: 1599px) {
+            bottom: -98px;
+            max-width: 188px;
+            height: 188px;
+        }
+        @media screen and (min-width: 768px) and (max-width: 1199px) {
+            bottom: -81px;
+            max-width: 155px;
+            height: 155px;
+        }
+        @media screen and (max-width: 767px) {
+            bottom: -61px;
+            max-width: 115px;
+            height: 115px;
+        }
+    }
+}

@@ -1,0 +1,122 @@
+.img-popup {
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+    &--active {
+        visibility: visible;
+        opacity: 1;
+        pointer-events: all;
+        .img-popup {
+            &__close {
+                opacity: 1;
+            }
+            &__image {
+                transform: translate(-50%, -50%);
+                opacity: 1;
+            }
+            &__overlay {
+                visibility: visible;
+                opacity: 1;
+                pointer-events: all;
+            }
+        }
+    }
+    &__close {
+        position: absolute;
+        top: 0;
+        right: -20px;
+        z-index: 1;
+        transform: translateX(100%);
+        display: block;
+        padding: 0;
+        min-width: 40px;
+        width: 40px;
+        height: 30px;
+        font-size: 0;
+        opacity: 0;
+        background: transparent;
+        border: none;
+        border-radius: 0;
+        transition: all 0.25s ease;
+        &:focus {
+            outline: none;
+        }
+        &:focus-visible {
+            .img-popup {
+                &__close-inner {
+                    &:first-child {
+                        transform: rotate(30deg);
+                    }
+                    &:last-child {
+                        transform: rotate(-30deg);
+                    }
+                }
+            }
+        }
+
+        @media screen and (hover: hover) {
+            &:hover {
+                .img-popup {
+                    &__close-inner {
+                        &:first-child {
+                            transform: rotate(30deg);
+                        }
+                        &:last-child {
+                            transform: rotate(-30deg);
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &__close-inner {
+        position: absolute;
+        top: 15px;
+        right: 0;
+        left: 0;
+        display: block;
+        width: 100%;
+        height: 2px;
+        background: $white-color;
+        transition: all 0.25s ease-in-out;
+        &:first-child {
+            transform: rotate(45deg);
+        }
+        &:last-child {
+            transform: rotate(-45deg);
+        }
+    }
+    &__image {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        z-index: 1001;
+        transform: translate(-50%, -50%);
+        opacity: 0;
+        max-height: 90vh;
+        background-color: $white-color;
+        transition: all 0.25s ease;
+        img {
+            display: block;
+            max-height: 90vh;
+            object-fit: contain;
+            object-position: center center;
+        }
+    }
+    &__overlay {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 1000;
+        width: 100%;
+        height: 100%;
+        visibility: hidden;
+        opacity: 0;
+        background: rgba(64, 68, 69, 0.7);
+        backdrop-filter: blur(20px);
+        pointer-events: none;
+        transition: all 0.25s ease;
+    }
+}

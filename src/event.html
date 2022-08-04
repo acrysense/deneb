@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>deneb - Мероприятие</title>
+    <!-- styles -->
+    <style>
+        .loader {
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            z-index: 1100;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            width: 100%;
+            height: 100%;
+            background: rgba(64, 68, 69, 0.9);
+            -webkit-backdrop-filter: blur(30px);
+            backdrop-filter: blur(30px);
+            transition: all 0.25s ease-in-out;
+        }
+        .loader--hidden {
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+        .loader__wrapper {
+            text-align: center;
+        }
+        .loader__logotype {
+            margin: 0 auto;
+            max-width: 206px;
+            width: 100%;
+        }
+    </style>
+    <link rel="stylesheet" href="css/vendor.min.css">
+    <link rel="stylesheet" href="css/app.min.css">
+</head>
+<body>
+    <!-- loader -->
+    <div class="loader" id="loader">
+        <div class="loader__wrapper">
+            <picture class="loader__logotype">
+                <img src="img/dist/loader.svg" width="206px" height="62px" alt="deneb">
+            </picture>
+        </div>
+    </div>
+    <!-- end of loader -->
+    <div id="scroll-animate">
+        <div id="scroll-animate-main">
+            <div class="wrapper-parallax">
+                <!-- header -->
+                <header class="header header--white" id="header">
+                    <a href="index.html" class="logotype header__logotype">
+                        <img src="img/dist/logotype-white.svg" alt="deneb" width="78px" height="37px" class="header__logotype--static">
+                        <img src="img/dist/logotype-purple.svg" alt="deneb" width="78px" height="37px" class="header__logotype--menu">
+                    </a>
+                    <button class="hamburger" id="hamburger-toggle" aria-label="Меню">
+                        <span class="hamburger__inner"></span>
+                        <span class="hamburger__inner"></span>
+                    </button>
+                    <div class="header__inner">
+                        <div class="header__scroll">
+                            <button class="language" aria-label="Язык">EN</button>
+                            <nav class="nav">
+                                <ul class="nav__list">
+                                    <li class="nav__item">
+                                        <a href="index.html" class="nav__link">Главная</a>
+                                    </li>
+                                    <li class="nav__item">
+                                        <a href="about.html" class="nav__link">О компании</a>
+                                    </li>
+                                    <li class="nav__item">
+                                        <a href="products.html" class="nav__link">Напитки</a>
+                                    </li>
+                                    <li class="nav__item">
+                                        <a href="community.html" class="nav__link">Сообщество</a>
+                                    </li>
+                                    <li class="nav__item">
+                                        <a href="events.html" class="nav__link">Мероприятия</a>
+                                    </li>
+                                    <li class="nav__item">
+                                        <a href="contacts.html" class="nav__link">Контакты</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </header>
+                <!-- end of header -->
+                <!-- main -->
+                <div class="main" id="main">
+                    <div class="swiper-slide" style="background-image: url(img/dist/event-bg.jpg);">
+                        <div class="main__slide main__slide--limit">
+                            <div class="main__body">
+                                <picture class="main__img">
+                                    <img src="img/dist/main-slide-img.png" width="309px" height="30px" alt="Image">
+                                </picture>
+                                <h2 class="main__title main__title--gradient">Вершина <br>добра</h2>
+                                <picture class="main__img">
+                                    <img src="img/dist/youtube-img.png" width="101px" height="20px" alt="Image">
+                                </picture>
+                            </div>
+                            <a href="#" class="main__click-img">
+                                <img src="img/dist/main-slide-image.png" alt="Image">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- end of main -->
+                <!-- parallax content -->
+                <div class="parallax-content" id="parallax-content">
+                    <!-- event -->
+                    <section class="event" id="event">
+                        <div class="container container--lg">
+                            <div class="section-heading section-heading--ultra">
+                                <h2 class="section-heading__title" data-aos="fade-in">Три спортсмена штурмуют <br>высоту 4466 метров</h2>
+                                <div class="section-heading__inner" data-aos="fade-in">
+                                    <p class="section-heading__description section-heading__description--opacity">Особой гордостью компании стала природная питьевая вода «Горная», являющаяся лидером рынка чистой негазированной воды и ставшая нарицательным названием в республике для всей бутилированной воды.</p>
+                                    <p class="section-heading__description section-heading__description--opacity">«Горная» берёт своё начало в ледниках Большого Кавказского хребта. К заводу проложена отдельная закрытая ветка миатлинского водовода в обход городских очистных сооружений.</p>
+                                </div>
+                            </div>
+                            <div class="event__wrapper">
+                                <article class="event__item" style="background-image: url(img/dist/event-01.png);" data-aos="fade-right">
+                                    <h3 class="event__title">Три спортсмена штурмуют <br>высоту 4466 метров</h3>
+                                </article>
+                                <article class="event__item" style="background-image: url(img/dist/event-02.png);" data-aos="fade-left"></article>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- end of event -->
+                    <!-- purpose of the event -->
+                    <section class="purpose-event" id="purpose-event">
+                        <div class="container container--lg">
+                            <div class="purpose-event__body">
+                                <div class="purpose-event__top" data-aos="fade-in">
+                                    <picture class="purpose-event__logotype">
+                                        <img src="img/dist/logotype-tooba.svg" alt="Tooba">
+                                    </picture>
+                                    <span class="purpose-event__help">Помогать легко!</span>
+                                </div>
+                                <h2 class="purpose-event__title" data-aos="fade-in">Цель мероприятия  — благотворительность</h2>
+                                <p class="purpose-event__description" data-aos="fade-in">
+                                    Включиться в марафон добра и поддержать участников донатом можно через приложение Tooba.<br>
+                                    Все собранные средства пойдут на закрытие сборов на благотворительной платформе Tooba.
+                                </p>
+                            </div>
+                            <div class="purpose-event__inner">
+                                <picture class="purpose-event__img" data-aos="fade-in">
+                                    <img src="img/dist/qr.png" alt="Image">
+                                </picture>
+                                <div class="purpose-event__info" data-aos="fade-in">
+                                    <p class="purpose-event__description">Скачайте приложение Tooba <br>и помогайте легко!</p>
+                                    <a href="#" class="purpose-event__btn help-btn">
+                                        <svg class="help-btn__icon">
+                                            <use xlink:href="img/dist/sprite.svg#icon-like"></use>
+                                        </svg>
+                                        <span>Хочу помочь</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- end of purpose of the event -->
+                    <!-- people -->
+                    <section class="people" id="people">
+                        <div class="container container--lg">
+                            <div class="people__item">
+                                <div class="people__body" data-aos="fade-right">
+                                    <div class="people__group">
+                                        <ul class="c-abilities people__abilities">
+                                            <li class="c-abilities__item">
+                                                <svg class="c-abilities__icon">
+                                                    <use xlink:href="img/dist/sprite.svg#icon-abilities-01"></use>
+                                                </svg>
+                                            </li>
+                                            <li class="c-abilities__item">
+                                                <svg class="c-abilities__icon">
+                                                    <use xlink:href="img/dist/sprite.svg#icon-abilities-02"></use>
+                                                </svg>
+                                            </li>
+                                            <li class="c-abilities__item">
+                                                <svg class="c-abilities__icon">
+                                                    <use xlink:href="img/dist/sprite.svg#icon-abilities-03"></use>
+                                                </svg>
+                                            </li>
+                                        </ul>
+                                        <h3 class="people__title">Сердер Эмирчубанов</h3>
+                                    </div>
+                                    <p class="people__description">Спасатель поискового — спасательного отряда МЧС России. Мастер спорта по спасательному многоборью. Чемпион России по приключенческим гонкам. <br>6 раз покорял Базардюзю.</p>
+                                </div>
+                                <picture class="people__img" data-aos="fade-left">
+                                    <img src="img/dist/person-01.jpg" alt="Image">
+                                </picture>
+                            </div>
+                            <div class="people__item">
+                                <div class="people__body" data-aos="fade-right">
+                                    <div class="people__group">
+                                        <ul class="c-abilities people__abilities">
+                                            <li class="c-abilities__item">
+                                                <svg class="c-abilities__icon">
+                                                    <use xlink:href="img/dist/sprite.svg#icon-abilities-04"></use>
+                                                </svg>
+                                            </li>
+                                            <li class="c-abilities__item">
+                                                <svg class="c-abilities__icon">
+                                                    <use xlink:href="img/dist/sprite.svg#icon-abilities-05"></use>
+                                                </svg>
+                                            </li>
+                                            <li class="c-abilities__item">
+                                                <svg class="c-abilities__icon">
+                                                    <use xlink:href="img/dist/sprite.svg#icon-abilities-06"></use>
+                                                </svg>
+                                            </li>
+                                        </ul>
+                                        <h3 class="people__title">Камиль Камилов</h3>
+                                    </div>
+                                    <p class="people__description">Триатлет. Мастер спорта по вольной борьбе. <br>Участник марафонов и соревнований по триатлону. Неоднократный финишёр IronStar.</p>
+                                </div>
+                                <picture class="people__img" data-aos="fade-left">
+                                    <img src="img/dist/person-11.jpg" alt="Image">
+                                </picture>
+                            </div>
+                            <div class="people__item">
+                                <div class="people__body" data-aos="fade-right">
+                                    <div class="people__group">
+                                        <ul class="c-abilities people__abilities">
+                                            <li class="c-abilities__item">
+                                                <svg class="c-abilities__icon">
+                                                    <use xlink:href="img/dist/sprite.svg#icon-abilities-05"></use>
+                                                </svg>
+                                            </li>
+                                            <li class="c-abilities__item">
+                                                <svg class="c-abilities__icon">
+                                                    <use xlink:href="img/dist/sprite.svg#icon-abilities-07"></use>
+                                                </svg>
+                                            </li>
+                                            <li class="c-abilities__item">
+                                                <svg class="c-abilities__icon">
+                                                    <use xlink:href="img/dist/sprite.svg#icon-abilities-08"></use>
+                                                </svg>
+                                            </li>
+                                        </ul>
+                                        <h3 class="people__title">Максим Королёв</h3>
+                                    </div>
+                                    <p class="people__description">Тренер по бегу клуба DagRun. Чемпион Дагестана в беге на 1500 и 5000 м. Чемпион Дагестана по кроссу на 10 км. Чемпион Забег.рф 2021 на дистанции 10 км.</p>
+                                </div>
+                                <picture class="people__img" data-aos="fade-left">
+                                    <img src="img/dist/person-21.jpg" alt="Image">
+                                </picture>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- end of people -->
+                </div>
+                <!-- end of parallax content -->
+                <!-- footer -->
+                <footer class="footer footer--parallax" id="footer">
+                    <div class="footer__top">
+                        <nav class="footer-nav">
+                            <ul class="footer-nav__list">
+                                <li class="footer-nav__item">
+                                    <a href="#" class="footer-nav__link">Партнёры</a>
+                                </li>
+                                <li class="footer-nav__item">
+                                    <a href="#" class="footer-nav__link">Соцсети</a>
+                                </li>
+                                <li class="footer-nav__item">
+                                    <a href="products.html" class="footer-nav__link">Напитки</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="footer__bottom">
+                        <ul class="footer__list">
+                            <li class="footer__item">
+                                <a href="contacts.html" class="footer__link">Контакты</a>
+                            </li>
+                            <li class="footer__item">
+                                <a href="about.html" class="footer__link">О компании</a>
+                            </li>
+                            <li class="footer__item">
+                                <a href="#" class="footer__link">Политика конфиденциальности</a>
+                            </li>
+                            <li class="footer__item">
+                                <a href="documents.html" class="footer__link">Документы</a>
+                            </li>
+                            <li class="footer__item">
+                                <p class="footer__copyright">© 1997–2022</p>
+                            </li>
+                        </ul>
+                    </div>
+                </footer>
+                <!-- end of footer -->
+            </div>
+        </div>
+    </div>
+    <!-- scripts -->
+    <script src="js/vendor.min.js"></script>
+    <script src="js/app.min.js"></script>
+</body>
+</html>
