@@ -960,6 +960,11 @@
                 grid-column-start: 1;
                 grid-column-end: 2;
                 border-radius: 20px 20px 0 0;
+                .advantages {
+                    &__img {
+                        border-radius: 20px 20px 0 0;
+                    }
+                }
             }
             &--double {
                 grid-row-start: 3;
@@ -973,6 +978,11 @@
                 grid-column-start: 1;
                 grid-column-end: 2;
                 border-radius: 0 0 20px 20px;
+                .advantages {
+                    &__img {
+                        border-radius: 0 0 20px 20px;
+                    }
+                }
             }
             &--fourth {
                 grid-row-start: 6;
