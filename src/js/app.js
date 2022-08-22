@@ -457,44 +457,6 @@ document.addEventListener('DOMContentLoaded', function () {
                 }
             }
         });
-
-        //mainSliderButtonPrev.addEventListener('mousemove', (event) => {
-        //    const elem = mainSliderButtonPrev.querySelector('.swiper-button-icon');
-
-        //    let X = event.pageX - mainSliderButtonPrev.getBoundingClientRect().left;
-        //    let Y = event.pageY;
-        //    let top = Y - 50 + 'px';
-        //    let left = X - 70 + 'px';
-
-        //    elem.style.display = 'block';
-        //    elem.style.top = top;
-        //    elem.style.left = left;
-        //})
-
-        //mainSliderButtonPrev.addEventListener('mouseout', (event) => {
-        //    const elem = mainSliderButtonPrev.querySelector('.swiper-button-icon');
-
-        //    elem.style.display = 'none';
-        //})
-
-        //mainSliderButtonNext.addEventListener('mousemove', (event) => {
-        //    const elem = mainSliderButtonNext.querySelector('.swiper-button-icon');
-
-        //    let X = event.pageX - mainSliderButtonNext.getBoundingClientRect().left;
-        //    let Y = event.pageY;
-        //    let top = Y - 50 + 'px';
-        //    let left = X + 10 + 'px';
-
-        //    elem.style.display = 'block';
-        //    elem.style.top = top;
-        //    elem.style.left = left;
-        //})
-
-        //mainSliderButtonNext.addEventListener('mouseout', (event) => {
-        //    const elem = mainSliderButtonNext.querySelector('.swiper-button-icon');
-
-        //    elem.style.display = 'none';
-        //})
     }
 
     // content
@@ -541,6 +503,35 @@ document.addEventListener('DOMContentLoaded', function () {
                 prevEl: '.swiper-button-prev',
                 nextEl: '.swiper-button-next',
             },
+        });
+    }
+
+    // drinks
+    const drinksSlider = document.querySelector('.drinks-slider__slider .swiper')
+
+    if (drinksSlider) {
+        const myDrinksSlider = new Swiper(drinksSlider, {
+            slidesPerView: 6,
+            spaceBetween: 20,
+            speed: 800,
+            loop: true,
+            navigation: {
+                nextEl: drinksSlider.closest('.drinks-slider__slider').querySelector('.drinks-slider__btn'),
+            },
+            breakpoints: {
+                0: {
+                    slidesPerView: 2,
+                },
+                768: {
+                    slidesPerView: 4,
+                },
+                1024: {
+                    slidesPerView: 5,
+                },
+                1200: {
+                    slidesPerView: 6,
+                }
+            }
         });
     }
 
