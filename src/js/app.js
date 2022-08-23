@@ -42,9 +42,8 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 
-    if (content) {
+    if (content && window.innerWidth >= 1024) {
         let windowHeight = main.classList.contains('main--md') ? ((window.innerHeight / 1.2) - 10) : ((window.innerHeight / 1.1) - 10)
-        console.log(windowHeight)
         let footerHeight = footer.getBoundingClientRect().height
         let heightDocument = windowHeight + (content.getBoundingClientRect().height) + (footer.getBoundingClientRect().height) - 20;
 
