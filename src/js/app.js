@@ -477,7 +477,10 @@ document.addEventListener('DOMContentLoaded', function () {
             },
             breakpoints: {
                 0: {
-                    slidesPerView: 'auto'
+                    slidesPerView: 1,
+                },
+                620: {
+                    slidesPerView: 2,
                 },
                 1024: {
                     slidesPerView: 3,
@@ -506,7 +509,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     // drinks
-    const drinksSlider = document.querySelector('.drinks-slider__slider .swiper')
+    const drinksSlider = document.querySelector('.drinks-slider__slider:not(.drinks-slider__slider--sm) .swiper')
 
     if (drinksSlider) {
         const myDrinksSlider = new Swiper(drinksSlider, {

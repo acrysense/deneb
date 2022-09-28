@@ -2993,12 +2993,33 @@
         height: 27px;
         color: $primary-color;
     }
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 40px;
+
+        @media screen and (max-width: 767px) {
+            flex-wrap: wrap;
+            .drinks-slider {
+                &__slide {
+                    width: calc(50% - 20px);
+                    &:nth-child(2n) {
+                        margin-left: 40px;
+                    }
+                    &:nth-child(n + 3) {
+                        margin-top: 40px;
+                    }
+                }
+            }
+        }
+    }
     &__slide {
         display: flex;
         align-items: flex-end;
     }
     &__img {
         max-width: 73px;
+        min-width: 73px;
         width: 100%;
         height: 218px;
         img {
@@ -3006,6 +3027,71 @@
             width: 100%;
             height: 100%;
             object-fit: contain;
+        }
+        &--sm {
+            max-width: 93px;
+            min-width: 93px;
+            height: 281px;
+        }
+        &--md {
+            max-width: 91px;
+            min-width: 91px;
+            height: 321px;
+        }
+        &--lg {
+            max-width: 118px;
+            min-width: 118px;
+            height: 366px;
+        }
+        &--xl {
+            max-width: 233px;
+            min-width: 233px;
+            height: 482px;
+        }
+
+        @media screen and (min-width: 768px) and (max-width: 1023px) {
+            &--sm {
+                max-width: 73px;
+                min-width: 73px;
+                height: 201px;
+            }
+            &--md {
+                max-width: 61px;
+                min-width: 61px;
+                height: 221px;
+            }
+            &--lg {
+                max-width: 78px;
+                min-width: 78px;
+                height: 256px;
+            }
+            &--xl {
+                max-width: 173px;
+                min-width: 173px;
+                height: 362px;
+            }
+        }
+        @media screen and (max-width: 767px) {
+            &--sm {
+                max-width: 73px;
+                min-width: 73px;
+                height: 218px;
+            }
+            &--md {
+                max-width: auto;
+                min-width: auto;
+                height: auto;
+            }
+            &--lg {
+                max-width: 93px;
+                min-width: 93px;
+                height: 248px;
+            }
+            &--xl {
+                max-width: auto;
+                min-width: auto;
+                height: auto;
+            }
         }
     }
     &__body {
