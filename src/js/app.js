@@ -522,10 +522,12 @@ document.addEventListener('DOMContentLoaded', function () {
             },
             breakpoints: {
                 0: {
-                    slidesPerView: 2,
+                    slidesPerView: 'auto',
+                    spaceBetween: 35,
                 },
                 768: {
                     slidesPerView: 4,
+                    spaceBetween: 20,
                 },
                 1024: {
                     slidesPerView: 5,
