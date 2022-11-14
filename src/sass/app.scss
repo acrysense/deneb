@@ -2949,9 +2949,23 @@
 
     &__slider {
         overflow: hidden;
+        &--auto {
+            .swiper-slide {
+                width: fit-content;
+            }
+        }
 
+        @media screen and (min-width: 1024px) and (max-width: 1199px) {
+            margin: 0 -70px;
+            padding: 0 70px;
+        }
+        @media screen and (min-width: 768px) and (max-width: 1023px) {
+            margin: 0 -44px;
+            padding: 0 44px;
+        }
         @media screen and (max-width: 767px) {
-            margin-right: calc(50% - 50vw);
+            margin: 0 -20px;
+            padding: 0 20px;
         }
         
         .swiper-wrapper {
@@ -3064,49 +3078,49 @@
 
         @media screen and (min-width: 768px) and (max-width: 1023px) {
             &--sm {
-                max-width: 73px;
-                min-width: 73px;
-                height: 201px;
+                max-width: 47px;
+                min-width: 47px;
+                height: 142px;
             }
             &--md {
-                max-width: 61px;
-                min-width: 61px;
-                height: 221px;
+                max-width: 54px;
+                min-width: 54px;
+                height: 165px;
             }
             &--lg {
-                max-width: 78px;
-                min-width: 78px;
-                height: 256px;
+                max-width: 62px;
+                min-width: 62px;
+                height: 189px;
             }
             &--xl {
-                max-width: 173px;
-                min-width: 173px;
-                height: 362px;
+                max-width: 106px;
+                min-width: 106px;
+                height: 221px;
             }
         }
         @media screen and (max-width: 767px) {
-            max-width: 32px;
-            min-width: 32px;
-            height: 123px;
+            max-width: 39px;
+            min-width: 39px;
+            height: 128px;
             &--sm {
-                max-width: 73px;
-                min-width: 73px;
-                height: 218px;
+                max-width: 47px;
+                min-width: 47px;
+                height: 142px;
             }
             &--md {
-                max-width: auto;
-                min-width: auto;
-                height: auto;
+                max-width: 54px;
+                min-width: 54px;
+                height: 165px;
             }
             &--lg {
-                max-width: 93px;
-                min-width: 93px;
-                height: 248px;
+                max-width: 62px;
+                min-width: 62px;
+                height: 189px;
             }
             &--xl {
-                max-width: auto;
-                min-width: auto;
-                height: auto;
+                max-width: 106px;
+                min-width: 106px;
+                height: 221px;
             }
         }
     }

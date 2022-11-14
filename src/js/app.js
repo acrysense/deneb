@@ -509,7 +509,8 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     // drinks
-    const drinksSlider = document.querySelector('.drinks-slider__slider:not(.drinks-slider__slider--sm) .swiper')
+    const drinksSlider = document.querySelector('.drinks-slider__slider:not(.drinks-slider__slider--auto) .swiper')
+    const drinksSliderAuto = document.querySelector('.drinks-slider__slider--auto .swiper')
 
     if (drinksSlider) {
         const myDrinksSlider = new Swiper(drinksSlider, {
@@ -535,6 +536,26 @@ document.addEventListener('DOMContentLoaded', function () {
                 1200: {
                     slidesPerView: 6,
                 }
+            }
+        });
+    }
+
+    if (drinksSliderAuto) {
+        const myDrinksSliderAuto = new Swiper(drinksSliderAuto, {
+            slidesPerView: 'auto',
+            spaceBetween: 60,
+            speed: 800,
+            loop: true,
+            navigation: {
+                nextEl: drinksSliderAuto.closest('.drinks-slider__slider').querySelector('.drinks-slider__btn'),
+            },
+            breakpoints: {
+                0: {
+                    spaceBetween: 35,
+                },
+                768: {
+                    spaceBetween: 60,
+                },
             }
         });
     }
